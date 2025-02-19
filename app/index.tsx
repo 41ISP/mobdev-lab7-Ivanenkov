@@ -1,25 +1,22 @@
 import Button from "@/shared/ui/btn/Button"
-import { StyleSheet, Text, View } from "react-native"
+import Input from "@/shared/ui/input/Input"
+import { router } from "expo-router"
+import { useEffect, useState } from "react"
+import { Text, View } from "react-native"
+import { create} from "zustand"
 
-const IndexScreen = () => {
+
+const LoginScreen = () => {
+    const [value, setValue] = useState("")
+    const [userId, setUserId]= useState()
+    useEffect(() => {
+        // if(userId = value)
+    }, [])
     return (
-        <View >
-            <Button ><Text>123</Text></Button>
+        <View>
+            <Input value={value} setValue={setValue} placevalue="Введите свой id"></Input>
+            <Button onClick={() => router.replace('/(tabs)')}></Button>
         </View>
     )
 }
-export default IndexScreen
-
-const Style = StyleSheet.create(
-    {
-        // btn: {
-        //     width: 150,
-        //     height: 50,
-        //     borderRadius: 1,
-        //     borderWidth: 1,
-        //     borderColor: 'black',
-        //     justifyContent: 'center',
-        //     alignItems: 'center'
-        // },
-    }
-)
+export default LoginScreen

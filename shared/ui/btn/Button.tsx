@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native";
 interface IButtonProps extends PropsWithChildren {
   onClick?:()=> void,
@@ -8,17 +8,18 @@ interface IButtonProps extends PropsWithChildren {
 
 const Button = ({ children, onClick }: IButtonProps) => {
   return (
-    <TouchableOpacity style={Style.btn} onPress={onClick}>{children}</TouchableOpacity>
+    <TouchableOpacity style={Style.btn} onPress={onClick}><Text>{children}</Text></TouchableOpacity>
   )
 }
 
 const Style = StyleSheet.create(
     {
         btn: {
-            width: 150,
+            width: 130,
             height: 50,
-            borderRadius: 1,
+            borderRadius: 10,
             borderWidth: 1,
+            backgroundColor: "#66ccff",
             borderColor: 'black',
             justifyContent: 'center',
             alignItems: 'center'
