@@ -7,14 +7,22 @@ import { View } from "react-native"
 
 const LoginScreen = () => {
     const [value, setValue] = useState("")
-    const {user, setUser} = useUserStore()
-    
-    const handleClick= () =>{
-        if(value.trim().length >0 )
-        {
-            setUser({id: value})
+    const { user, setUser } = useUserStore()
+
+    const handleClick = () => {
+        if (user.id === value && value.trim().length > 0) {
+            alert("Вы вошли в аккаунт")
+            setUser({ id: value })
             router.replace('/(tabs)')
-            alert(value)
+            return(0)
+        }
+        else (user.id !== value && value.trim().length > 0)
+        {
+
+            alert("Вы создали аккаунт")
+            setUser({ id: value })
+            router.replace('/(tabs)')
+            return(0)
         }
     }
     useEffect(() => {
@@ -23,7 +31,7 @@ const LoginScreen = () => {
     }, [])
     return (
         <View>
-            <Stack.Screen name="index" options={{title: 'scroem', headerShown: false}}/>
+            <Stack.Screen name="index" options={{ title: 'scroem', headerShown: false }} />
             <Input value={value} setValue={setValue} placevalue="Введите свой id"></Input>
             <Button onClick={handleClick}></Button>
         </View>

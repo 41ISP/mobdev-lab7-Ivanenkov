@@ -1,10 +1,20 @@
-import { Text, View } from "react-native"
+import Contact from "@/shared/ui/contact/Contact"
+import { ScrollView, StyleSheet, } from "react-native"
 
-const ContactScreen = () =>{
-    return(
-        <View>
-            <Text>213213</Text>
-        </View>
+const ContactScreen = () => {
+
+    return (
+        <ScrollView style={Style.contact}>
+            <Contact />
+        </ScrollView>
     )
 }
+const Style = StyleSheet.create(
+    {
+        contact:{
+            borderWidth: 0,
+            backgroundColor:"#66ffff",
+        }
+    }
+)
 export default ContactScreen
