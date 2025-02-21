@@ -1,13 +1,13 @@
 import Button from "@/shared/ui/btn/Button"
-import { useEffect } from "react"
 import { StyleSheet, Text, View } from "react-native"
-import { router, useRouter } from "expo-router"
+import { router, Stack, useRouter } from "expo-router"
 const IndexScreen = () => {
     const userId = false
     const router = useRouter()
 
     return (
         <View >
+            <Stack.Screen name="index" options={{title: 'scroem', headerShown: false}}/>
             <Button><Text>123</Text></Button>
         </View>
     )

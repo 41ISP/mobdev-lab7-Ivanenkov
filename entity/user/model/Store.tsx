@@ -1,4 +1,3 @@
-import { InteractionManager } from "react-native"
 import { create } from "zustand"
 import { createJSONStorage, persist } from 'zustand/middleware'
 
@@ -27,4 +26,3 @@ export const useUserStore = create<IUserStore>()(
         },
     )
 )
-export default useUserStore

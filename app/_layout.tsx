@@ -1,14 +1,8 @@
-import Input from '@/shared/ui/input/Input';
-import Topbar from '@/shared/ui/Topbar';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Redirect, Stack, useRouter } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { View } from 'react-native';
 import 'react-native-reanimated';
-import LoginScreen from '.';
 
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
