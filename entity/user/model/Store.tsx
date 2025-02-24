@@ -17,7 +17,7 @@ export interface IUserRemote extends IUser {
 }
 export const useUserStore = create<IUserStore>()(
     persist((set) => ({
-        user: { id: "123" },
+        user: { id: "" },
         setUser: (userid) => set((name) => ({ ...name, user:  userid }))
     }),
         {

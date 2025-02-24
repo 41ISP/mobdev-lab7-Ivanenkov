@@ -35,7 +35,10 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack />
+    <Stack>
+
+  <Stack.Screen name="index" options={{ title: 'scroem', headerShown: false }} />  
+    </Stack>
   )
 }
 
