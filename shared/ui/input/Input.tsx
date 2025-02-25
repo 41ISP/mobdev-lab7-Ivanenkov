@@ -3,7 +3,7 @@ import { TextInput } from "react-native";
 interface IInput{
     value: string,
     setValue: ((e:string) => void);
-    placevalue:"Введите свой id"
+    placevalue: string
 }
 
 const Input = ({ value, setValue , placevalue}: IInput) => {

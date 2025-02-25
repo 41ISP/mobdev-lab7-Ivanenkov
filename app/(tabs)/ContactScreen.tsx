@@ -12,8 +12,9 @@ const ContactScreen = () => {
 const Style = StyleSheet.create(
     {
         contact:{
-            borderWidth: 0,
+           
             backgroundColor:"#66ffff",
+            padding:10,
         }
     }
 )

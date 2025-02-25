@@ -1,10 +1,16 @@
-import Chat from "@/shared/ui/chats/Chats"
-import { ScrollView, StyleSheet, Text, View } from "react-native"
+import Chats from "@/shared/ui/chats/Chats"
+import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native"
 
 const ChatsScreen = () =>{
+    const Data =[
+
+    ]
     return(
         <ScrollView style={Style.chat}>
-            <Chat/>
+            {/* <FlatList> */}
+
+            <Chats/>
+            {/* </FlatList> */}
         </ScrollView>
     )
 }
