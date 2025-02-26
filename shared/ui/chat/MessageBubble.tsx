@@ -22,6 +22,7 @@ const Style = StyleSheet.create({
         width: '60%',
         backgroundColor: "#66ccff",
         fontSize: 15,
+        borderRadius: 7,
         marginTop: 10,
         alignSelf: 'flex-end',
         padding: 10,

@@ -3,9 +3,6 @@ import Button from "./btn/Button"
 import { router } from "expo-router"
 const Topbar = () => {
 
-    const ContactPush=() =>{
-
-    }
     return (
         <View style={Style.view}>
             <Button onClick={()=> router.push('/')}>Сообщение💬</Button>

@@ -17,8 +17,9 @@ const ChatsScreen = () =>{
 const Style = StyleSheet.create(
     {
         chat:{
-            borderWidth: 0,
+            
             backgroundColor:"66ffcc",
+            padding: 10,
         }
     }
 )

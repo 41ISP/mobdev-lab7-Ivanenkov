@@ -8,6 +8,7 @@ const Chats =() =>{
     )
 }
 
+
 const Style = StyleSheet.create(
     {
         contact:{
@@ -19,6 +20,7 @@ const Style = StyleSheet.create(
             backgroundColor: "#66ccff",
             fontSize: 15,
             marginTop: 10,
+          
            
         }
     }
