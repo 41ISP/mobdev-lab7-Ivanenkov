@@ -1,7 +1,7 @@
 import { useUserStore } from "@/entity/user/model/Store"
 import Button from "@/shared/ui/btn/Button"
 import Input from "@/shared/ui/input/Input"
-import { router, Stack } from "expo-router"
+import { router} from "expo-router"
 import { useEffect, useState } from "react"
 import { StyleSheet, View } from "react-native"
 
@@ -10,10 +10,12 @@ const LoginScreen = () => {
     const { user, setUser } = useUserStore()
 
     const handleClick = () => {
+ 
         if (value.trim().length > 0) {
             setUser({ id: value })
             router.replace('/(tabs)')
         }
+    
     }
     useEffect(() => {
         // if(userId = value)

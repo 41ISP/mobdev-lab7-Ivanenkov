@@ -37,11 +37,16 @@ const Style = StyleSheet.create({
         height: "100%",
     },
     input: {
+        borderWidth: 1,
+        borderRadius:10,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
     messagebtn:{
+        borderRadius:10,
         width: 70,
+        justifyContent: 'center',
+        alignItems: 'center',
         height: 70,
         borderWidth: 0.5,
         backgroundColor: "#66ccff",
