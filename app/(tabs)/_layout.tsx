@@ -14,7 +14,7 @@ export default function TabLayout() {
       <Stack.Screen name="index" options={{title: 'scroem', headerShown: false}}/>
       <Stack.Screen name="ContactScreen" options={{title: 'Contact',headerShown: false}}/>
       <Stack.Screen name="ChatsScreen" options={{title: 'Chats', headerShown: false}}/>
-      <Stack.Screen name="LoginScreen" options={{title: 'Login', headerShown: false}}/>
+      
     </Stack>
       <Topbar/>
     </>

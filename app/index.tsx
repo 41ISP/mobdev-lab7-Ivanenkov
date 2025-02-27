@@ -4,7 +4,7 @@ import Input from "@/shared/ui/input/Input"
 import { router} from "expo-router"
 import { useEffect, useState } from "react"
 import { StyleSheet, View } from "react-native"
-
+import messangerAPI from "@/shared/ui/api/api"
 const LoginScreen = () => {
     const [value, setValue] = useState("")
     const { user, setUser } = useUserStore()
@@ -12,6 +12,7 @@ const LoginScreen = () => {
     const handleClick = () => {
  
         if (value.trim().length > 0) {
+            messangerAPI.registration
             setUser({ id: value })
             router.replace('/(tabs)')
         }
