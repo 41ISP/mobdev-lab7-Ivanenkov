@@ -12,7 +12,7 @@ const LoginScreen = () => {
     const handleClick = () => {
  
         if (value.trim().length > 0) {
-            messangerAPI.registration
+            messangerAPI.registration(value)
             setUser({ id: value })
             router.replace('/(tabs)')
         }

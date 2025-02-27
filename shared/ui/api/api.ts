@@ -8,12 +8,15 @@ const axiosmessangersite = axios.create({
 
 const messangerAPI = {
     registration: async (id: string) => {
-        const reponse = await axiosmessangersite.post('/login', {
-            data: {
+        try{
+            const reponse = await axiosmessangersite.post('/login', {
                 id: id
-                }
-        })
-        return reponse
+                
+            })
+            return reponse
+        } catch (error){
+            console.log(error)
+        }
     },
     message: async(id: string) =>{
         const reponse2 = await axiosmessangersite.get('/messages/'+id)

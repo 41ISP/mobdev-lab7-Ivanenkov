@@ -9,7 +9,6 @@ import 'react-native-reanimated';
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [userId, setUserId] = useState(false)
   const router = useRouter()
 
   const [loaded] = useFonts({
@@ -22,13 +21,7 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  useEffect(() => {
-    const userAuth = false
-    setUserId(userAuth)
-    if (userAuth) {
-      router.replace("/(tabs)")
-    }
-  }, [])
+
 
   if (!loaded) {
     return null;
