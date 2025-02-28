@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View, ViewComponent } from "react-native"
+import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View, ViewComponent } from "react-native"
 import MessageBubble from "./MessageBubble"
 import Input from "../input/Input"
 import { useState } from "react"
@@ -18,7 +18,7 @@ const Chat = () => {
                 <MessageBubble received={true} ><Text >Ну привет!</Text></MessageBubble>
             </ScrollView>
             <View style={Style.input}>
-                <Input value={message} setValue={setMessage} placevalue="Напишите сообщение" />
+                <TextInput style={Style.input2} value={message} onChangeText={setMessage} placeholder="Напишите сообщение" />
                 <TouchableOpacity style={Style.messagebtn}><Text style={Style.text}>✈️👍</Text></TouchableOpacity>
             </View>
         </View>
@@ -39,8 +39,12 @@ const Style = StyleSheet.create({
     input: {
         borderWidth: 1,
         borderRadius:10,
+        width:"100%",
         flexDirection: 'row',
         justifyContent: 'space-between'
+    },
+    input2:{
+        width:'80%',
     },
     messagebtn:{
         borderRadius:10,

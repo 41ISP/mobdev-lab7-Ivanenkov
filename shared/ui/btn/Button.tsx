@@ -15,7 +15,7 @@ const Button = ({ children, onClick }: IButtonProps) => {
 const Style = StyleSheet.create(
     {
         btn: {
-            width: '33.3%',
+            width: '25%',
             height: 50,
             // borderRadius: 10,
             borderWidth: 0.5,

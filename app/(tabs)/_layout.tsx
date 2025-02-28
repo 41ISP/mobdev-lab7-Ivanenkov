@@ -10,17 +10,17 @@ SplashScreen.preventAutoHideAsync();
 
 export default function TabLayout() {
   const [isMounted, setIsMounted] = useState(false)
-  // const [user, setUser] = useUserStore()
+  const {user, setUser}= useUserStore()
   const router = useRouter()
   useEffect(() => {
     setIsMounted(true)
   }, [])
 
-  // useEffect(() => {
-  //   if (isMounted && ) {
-  //     router.push("/login")
-  //   }
-  // }, [isMounted])
+  useEffect(() => {
+    if (isMounted && !user.id) {
+      router.push("/login")
+    }
+  }, [isMounted])
 
 
   return (
